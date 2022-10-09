@@ -7,16 +7,9 @@ export class UsersService {
 
   users: Array<User> = [
     {
-      id: 1,
-      nome: 'Nayane',
-      email: 'nayane@gmail.com',
-      senha: "123456",
-      adm: false
-    },
-    {
       id: 2,
-      nome: 'Eduardo',
-      email: 'eduardomarra@gmail.com',
+      nome: 'Administrador',
+      email: 'adm@gmail.com',
       senha: "123456",
       adm: true
     }
