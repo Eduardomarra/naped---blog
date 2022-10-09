@@ -1,0 +1,62 @@
+<div class="wrapper">
+  <app-header></app-header>
+  <div class="container" *ngIf="categorie">
+    <div class="card__details" >
+      <div class="card" >
+        <div class="btn__details">
+          <button class="btn-details-edit" *ngIf="user?.adm"
+              (click)="editFilme(
+                categorie.id,
+                categorie.description,
+                categorie.src,
+                categorie.title,
+                categorie.date,
+                categorie.category)"
+            >Editar
+          </button>
+          <button class="btn-details-delete" *ngIf="user?.adm" (click)="delete(categorie.id)">Excluir</button>
+        </div>
+        <div class="img__card">
+          <img src={{categorie.src}} alt="">
+        </div>
+      </div>
+      <div class="card__description">{{categorie.description}}</div>
+    </div>
+    <form class="register-form" [formGroup]="formSerie" *ngIf="isEdit">
+      <div class="form-field">
+        <label class="label-input">ID cadastro:</label>
+        <input type="number" formControlName="id">
+      </div>
+      <div class="form-field">
+        <label class="label-input">Título do filme:</label>
+        <input type="text" formControlName="title" placeholder="Digite o titulo">
+      </div>
+      <div class="form-field">
+        <label class="label-input">Imagem do produto:</label>
+        <input type="text" formControlName="src" placeholder="Digite a url">
+      </div>
+      <div class="form-field">
+          <label class="label-input">Descrição do filme:</label>
+          <textarea type="text"  class="input__description" formControlName="description" placeholder="Digite a descrição"></textarea>
+        </div>
+      <div class="form-field">
+        <label class="label-input">Data de criação:</label>
+        <input type="text" formControlName="date" placeholder="Data de criação">
+      </div>
+      <div class="form-field">
+        <label class="label-input">Categoria:</label>
+        <input type="text" formControlName="category" placeholder="Categoria">
+      </div>
+
+      <div class="action-form">
+          <button
+          class="cadastrarProduto"
+          type="submit"
+          (click)="saveEdit(categorie.id)"
+          [disabled]="formSerie.invalid">Salvar</button>
+      </div>
+    </form>
+  </div>
+  <app-footer></app-footer>
+</div>
+

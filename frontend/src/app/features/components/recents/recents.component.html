@@ -1,0 +1,12 @@
+<div class="recents__container">
+  <h3>Notícias mais recentes</h3>
+  <div class="recentes__wrapper">
+    <div class="card" *ngFor="let r of recentes">
+      <div class="img__card">
+        <img src={{r.src}} alt="">
+      </div>
+      <p>{{r.description}}</p>
+      <button (click)="handleClickPage(r.id)">Veja mais</button>
+    </div>
+  </div>
+</div>

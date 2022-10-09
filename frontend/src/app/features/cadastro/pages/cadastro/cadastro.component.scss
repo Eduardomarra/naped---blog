@@ -1,0 +1,146 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1100px;
+  width: 100%;
+  height: calc(100vh - 300px);
+  margin: 100px auto 0 auto;
+
+
+  h1 {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 60px;
+    color: #FEFBFB;
+    margin-bottom: 50px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 50%;
+    padding: 30px;
+    background: rgba(130, 87, 230, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+
+    h3 {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 20px;
+      color: #FEFBFB;
+      margin-bottom: 30px;
+    }
+
+    .label-control {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: #FEFBFB;
+      padding-bottom: 5px;
+    }
+
+    .input-control {
+      width: 100%;
+      height: 60px;
+      font-family: 'Lexend Deca';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 25px;
+      color: #989898;
+      background: #4d4d57;
+      padding-left: 40px;
+      outline: none;
+      border-radius: 10px;
+      margin-top: 10px;
+      border: none;
+      transition: all 0.3s ease-in-out;
+      margin-bottom: 20px;
+      &::placeholder {
+        color: #989898;
+      }
+      &:focus {
+        border: 1px solid #FEFBFB;
+        box-shadow: 0px 0px 10px rgba(130, 87, 230, 0.1);
+      }
+    }
+
+    p {
+      font-family: 'Lexend Deca';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: #b85353;
+    }
+
+      button {
+        width: 100%;
+        height: 50px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: 1px;
+        color: #FEFBFB;
+        background: #8257E6;
+        border-radius: 3px;
+        border: none;
+        cursor: pointer;
+      }
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .container {
+    height: calc(100vh - 300px);
+    margin: 50px auto 0 auto;
+    padding: 0 10px;
+
+    form {
+      width: 100%;
+      padding: 15px;
+
+      h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      .label-control {
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      .input-control {
+        width: 100%;
+        height: 40px;
+        font-size: 16px;
+        line-height: 20px;
+        padding-left: 20px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      button {
+        height: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) and (max-height: 480px) {
+  .container {
+    height: calc(100vh - 200px);
+    margin: 100px auto 100 auto;
+    padding: 0 10px;
+  }
+}

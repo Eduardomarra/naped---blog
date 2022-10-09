@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="container">
+  <div class="banner">
+    <div class="img__banner">
+      <img src="../../../../../assets/images/series/banner-series.svg" alt="">
+    </div>
+      <h1>{{title}}</h1>
+      <p>{{description}}</p>
+  </div>
+  <div class="input__search">
+    <input type="search" [(ngModel)]="pesquisar" (input)="search()" name="search-animes" id="search-animes"  placeholder="Quer ajuda na procura? Pesquise aqui"/>
+  </div>
+  <div class="create-post" *ngIf="user?.adm">
+    <button routerLink="/create-series">Novo Post</button>
+  </div>
+  <div class="cards__animes">
+    <div class="card" *ngFor="let n of series">
+      <div class="img__card" (click)="detalhesSerie(n.id)">
+        <img src={{n.src}} alt="">
+      </div>
+      <p>{{n.title}}</p>
+    </div>
+
+  </div>
+</div>
+<app-footer></app-footer>

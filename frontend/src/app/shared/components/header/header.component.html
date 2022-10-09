@@ -1,0 +1,40 @@
+<div class="header">
+  <div class="header-container">
+    <div class="header-logo">
+      <a class="logo" routerLink="/home">Naped</a>
+      <div class="menu__mobile" (click)="openMenuMobile()">
+        <div class="mobile"></div>
+      </div>
+    </div>
+    <div class="header-menu">
+      <ul>
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/filmes">Filmes</a></li>
+        <li><a routerLink="/series">Séries</a></li>
+        <li><a routerLink="/animes">Animes</a></li>
+        <li><a routerLink="/games">Games</a></li>
+      </ul>
+    </div>
+    <div class="header__btn">
+      <div>
+        <button *ngIf="!user" routerLink="/login" class="header-login">Login</button>
+      </div>
+      <div>
+        <button *ngIf="!user" routerLink="/register" class="header-login">Cadastrar</button>
+      </div>
+      <div>
+        <button *ngIf="user" (click)="exitSession()" routerLink="/login" class="header-login">Sair</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+

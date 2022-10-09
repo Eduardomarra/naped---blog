@@ -1,0 +1,47 @@
+<div class="news__container">
+  <div class="news">
+    <div class="list__cards">
+      <div class="card">
+        <div class="card__news" *ngFor="let n of newsletter">
+          <div class="card__img">
+            <img src={{n.src}} alt="">
+          </div>
+          <div class="news__description">
+            <h3>{{n.title}}</h3>
+            <p>{{n.description}}</p>
+            <span>{{ n.date | date: "d/M/yyy" }}</span>
+            <button (click)="handleClickPages(n.id)">Ler notícia</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="asside__bar__container">
+      <div class="asside__bar">
+        <h3>Categorias</h3>
+        <div class="asside__card">
+          <div>
+            <img src="../../../../assets/images/asside-anime.svg" alt="">
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eros tellus, malesuada et velit in, blandit molestie
+            dolor.</p>
+          <button routerLink="/animes" >Veja mais</button>
+        </div>
+        <div class="asside__card">
+          <div>
+            <img src="../../../../assets/images/asside-filmes.svg" alt="">
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eros tellus, malesuada et velit in, blandit molestie
+            dolor.</p>
+          <button routerLink="/filmes" >Veja mais</button>
+        </div>
+        <div class="asside__card">
+          <div>
+            <img src="../../../../assets/images/asside-games.svg" alt="">
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eros tellus, malesuada et velit in, blandit molestie
+            dolor.</p>
+          <button routerLink="/games" >Veja mais</button>
+        </div>
+      </div>
+    </div>
+  </div>

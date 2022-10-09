@@ -1,0 +1,15 @@
+<app-header></app-header>
+<div class="container">
+  <form>
+      <h3>Cadastro</h3>
+      <label for="nome" class="label-control">Nome</label>
+      <input type="text" [(ngModel)]="nome" id="nome" name="nome" class="input-control" placeholder="João da Silva" required autocomplete="off">
+      <label for="email" class="label-control">E-mail</label>
+      <input type="email" [(ngModel)]="email" id="email" name="email" class="input-control" placeholder="e-mail@gmail.com" required autocomplete="off">
+      <label for="password" class="label-control">Senha</label>
+      <input type="password" [(ngModel)]="senha" id="password" name="password" class="input-control" placeholder="******" required>
+      <p *ngIf="error">Usuário não encontrado.</p>
+      <button type="submit" class="btn-login" (click)="registerByUser()">Cadastrar</button>
+  </form>
+</div>
+<app-footer></app-footer>

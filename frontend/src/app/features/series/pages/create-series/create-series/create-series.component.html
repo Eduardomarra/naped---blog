@@ -1,0 +1,35 @@
+<div class="wrapper">
+  <app-header></app-header>
+  <div class="container">
+    <div class="register-container">
+      <h3>Criação de post de filmes</h3>
+      <form class="register-form" [formGroup]="formSeries">
+        <div class="form-field">
+          <label class="label-input">Título do filme:</label>
+          <input type="text" formControlName="title" placeholder="Digite o titulo">
+        </div>
+        <div class="form-field">
+          <label class="label-input">Imagem do produto:</label>
+          <input type="text" formControlName="src" placeholder="Digite a url">
+        </div>
+        <div class="form-field">
+          <label class="label-input">Descrição do filme:</label>
+          <textarea type="text" class="text__description" formControlName="description"></textarea>
+        </div>
+        <div class="form-field">
+          <label class="label-input">Data de criação:</label>
+          <input type="text" formControlName="date" placeholder="Data de criação">
+        </div>
+        <div class="form-field">
+          <label class="label-input">Categoria:</label>
+          <input type="text" formControlName="category" placeholder="Categoria">
+        </div>
+        <div class="action-form">
+          <button class="cadastrarProduto" type="submit" (click)="onSubmit()"
+            [disabled]="formSeries.invalid">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>
