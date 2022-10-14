@@ -32,6 +32,8 @@
       position: relative;
 
       img {
+        width: 761px;
+        height: 350px;
         filter: brightness(0.7);
       }
 
@@ -62,6 +64,8 @@
         position: relative;
 
         img {
+          width: 338px;
+          height: 165px;
           filter: brightness(0.7);
         }
 
@@ -70,8 +74,8 @@
           left: 0;
           bottom: 0;
           font-weight: 400;
-          font-size: 16px;
-          line-height: 20px;
+          font-size: 12px;
+          line-height: 14px;
           color: #FEFBFB;
           background: linear-gradient(360deg, #13131F 0%, rgba(19, 19, 31, 0) 100%);
           padding: 0 0 10px 15px;
