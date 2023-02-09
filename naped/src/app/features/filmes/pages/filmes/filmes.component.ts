@@ -24,6 +24,7 @@ export class FilmesComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+
     this.categoriesService.getcategories("filmes").subscribe( (filme) => {
       this.filmes = filme
     })
